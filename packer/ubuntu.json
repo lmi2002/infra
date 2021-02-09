@@ -23,10 +23,11 @@
       "instance_type": "t2.micro",
       "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "packer-example {{timestamp}}",
-          "tags":{
+      "tags":{
                 "Name": "DevOpsApp - {{timestamp}}"
-          }
-    }
+        },
+       "disable_stop_instance": true
+      }
   ],
   "provisioners": [
     {
